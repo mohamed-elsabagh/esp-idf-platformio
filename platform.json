@@ -1,6 +1,6 @@
 {
   "name": "espressif32",
-  "title": "Espressif 32",
+  "title": "Vivotronix ESP-IDF",
   "description": "Espressif Systems is a privately held fabless semiconductor company. They provide wireless communications and Wi-Fi chips which are widely used in mobile devices and the Internet of Things applications.",
   "url": "https://espressif.com/",
   "homepage": "http://platformio.org/platforms/espressif32",
@@ -15,26 +15,12 @@
   "version": "0.10.0",
   "packageRepositories": [
     "https://dl.bintray.com/platformio/dl-packages/manifest.json",
-    "http://dl.platformio.org/packages/manifest.json",
-    "https://raw.githubusercontent.com/eerimoq/simba/master/make/platformio/manifest.json",
-    "https://raw.githubusercontent.com/eerimoq/pumbaa/master/make/platformio/manifest.json"
+    "http://dl.platformio.org/packages/manifest.json"
   ],
   "frameworks": {
-    "arduino": {
-      "package": "framework-arduinoespressif32",
-      "script": "builder/frameworks/arduino.py"
-    },
     "espidf": {
       "package": "framework-espidf",
       "script": "builder/frameworks/espidf.py"
-    },
-    "simba": {
-      "package": "framework-simba",
-      "script": "builder/frameworks/simba.py"
-    },
-    "pumbaa": {
-      "package": "framework-pumbaa",
-      "script": "builder/frameworks/pumbaa.py"
     }
   },
   "packages": {
@@ -42,25 +28,10 @@
       "type": "toolchain",
       "version": "~1.50200.0"
     },
-    "framework-arduinoespressif32": {
-      "type": "framework",
-      "optional": true,
-      "version": "~1.2.0"
-    },
     "framework-espidf": {
       "type": "framework",
       "optional": true,
       "version": "~2.210.0"
-    },
-    "framework-simba": {
-      "type": "framework",
-      "optional": true,
-      "version": ">=12.2.0"
-    },
-    "framework-pumbaa": {
-      "type": "framework",
-      "optional": true,
-      "version": ">=2.3.0"
     },
     "tool-esptoolpy": {
       "type": "uploader",
